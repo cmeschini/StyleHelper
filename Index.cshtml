@@ -1,0 +1,29 @@
+﻿@using FluentBootstrap
+@using MDS.TC.Web.Infrastructure
+@{
+    ViewBag.Title = "Home Page";
+    var numero = 1000;
+    
+}
+
+<div class="content">
+    
+    <div class="row">
+        <div class="col-xs-12">
+            <h1><p class="text-center">Tarjeta Centralizada</p></h1>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-xs-12">
+            @numero.AsCurrency().Build()
+            @numero.AsCurrency().Bold().Build()
+            @numero.AsCurrency().Bold().Italic().SaveAs("MoneyBoldItalic").Build();
+            @numero.AsCurrency().Bold().Italic().AtCenter().Build("p")
+            @numero.AsCurrency().Bold().Italic().Underlined().AtLeft().Build("h1")
+            @numero.AsCurrency().Small().Italic().Underlined().AtLeft().Build("h2")
+            @numero.Apply("MoneyBoldItalic", "h3")
+        </div>
+    </div>
+</div>
+
